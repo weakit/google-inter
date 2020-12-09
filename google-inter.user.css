@@ -1,4 +1,4 @@
-/* ==UserStyle==
+    /* ==UserStyle==
 @name         Inter for Google
 @description  UserCSS example
 @namespace    github.com/weakit/google-inter
@@ -11,540 +11,665 @@
 
 @var checkbox ver "Show version in webpage" 1
 ==/UserStyle== */
-
-@-moz-document regexp("https?:\\/\\/(.*\\.)?google\\.(co\\..*|com)\\/.*") {
-    /* base style */
-    @import url('https://rsms.me/inter/inter.css');
-     :root {
-        --infoStr: "Inter\0000a0for Google\0000a00.1";
-        --font: "Inter";
-    }
-    .gb_l .gb_pb {
-        letter-spacing: -.007em;
-    }
-}
-
-@-moz-document regexp("https?:\\/\\/((www|images)\\.)?google\\.(co\\..*|com)\\/(search|webhp|videohp|advanced_search|advanced_image_search|preferences|shopping|imghp).*"),
-regexp("https?:\\/\\/((www|images)\\.)?google\\.(co\\..*|com)\\/(\\?.*)?") {
-    /* google search */
-    .tdwSqf,
-    .wf-b,
-    .wf-b .DsryEe,
-    .wf-b .V88cHc,
-    .wf-b .XcVN5d,
-    .wf-b .h1QFOe,
-    .wf-b .mfMhoc,
-    a,
-    div,
-    html,
-    input,
-    p,
-    select,
-    span {
-        font-family: var(--font), sans-serif !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    .vk_h {
-        font-weight: 400!important;
-        letter-spacing: -.02em
-    }
-    b,
-    em {
-        font-weight: 700
-    }
-    .ab_button,
-    .co8aDb b {
-        font-weight: 600
-    }
-    .co8aDb>b>b {
-        font-weight: 800;
-        letter-spacing: 0
-    }
-    .LC20lb,
-    .JolIg,
-    .XcVN5d,
-    .zbA8Me {
-        letter-spacing: -.01em
-    }
-    .XpoqFe {
-        /* to keep IPA symbols consistent */
-        font-family: 'Arial', var(--font), sans-serif!important;
-        letter-spacing: .01em
-    }
-    .ynRric {
-        letter-spacing: -.002em !important
-    }
-    .Uekwlc,
-    .vk_sh {
-        font-weight: 400!important
-    }
-    .ellip {
-        font-size: 21px;
-        letter-spacing: -.02em;
-    }
-    h1,
-    h2,
-    h3 {
-        letter-spacing: -.015em !important;
-    }
-    if (ver) {
-        #fsl:after {
-            padding-left: 27px;
-            opacity: .6;
-            content: var(--infoStr)
+    
+    @-moz-document regexp("https?:\\/\\/(.*\\.)?google\\.(co\\..*|com)\\/.*") {
+        /* base style */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 100;
+            font-display: swap;
+            src: url("font-files/Inter-Thin.woff2?v=3.15") format("woff2"), url("font-files/Inter-Thin.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 100;
+            font-display: swap;
+            src: url("font-files/Inter-ThinItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-ThinItalic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 200;
+            font-display: swap;
+            src: url("font-files/Inter-ExtraLight.woff2?v=3.15") format("woff2"), url("font-files/Inter-ExtraLight.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 200;
+            font-display: swap;
+            src: url("font-files/Inter-ExtraLightItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-ExtraLightItalic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url("font-files/Inter-Light.woff2?v=3.15") format("woff2"), url("font-files/Inter-Light.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 300;
+            font-display: swap;
+            src: url("font-files/Inter-LightItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-LightItalic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url("font-files/Inter-Regular.woff2?v=3.15") format("woff2"), url("font-files/Inter-Regular.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 400;
+            font-display: swap;
+            src: url("font-files/Inter-Italic.woff2?v=3.15") format("woff2"), url("font-files/Inter-Italic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url("font-files/Inter-Medium.woff2?v=3.15") format("woff2"), url("font-files/Inter-Medium.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 500;
+            font-display: swap;
+            src: url("font-files/Inter-MediumItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-MediumItalic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url("font-files/Inter-SemiBold.woff2?v=3.15") format("woff2"), url("font-files/Inter-SemiBold.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 600;
+            font-display: swap;
+            src: url("font-files/Inter-SemiBoldItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-SemiBoldItalic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url("font-files/Inter-Bold.woff2?v=3.15") format("woff2"), url("font-files/Inter-Bold.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 700;
+            font-display: swap;
+            src: url("font-files/Inter-BoldItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-BoldItalic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-display: swap;
+            src: url("font-files/Inter-ExtraBold.woff2?v=3.15") format("woff2"), url("font-files/Inter-ExtraBold.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 800;
+            font-display: swap;
+            src: url("font-files/Inter-ExtraBoldItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-ExtraBoldItalic.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url("font-files/Inter-Black.woff2?v=3.15") format("woff2"), url("font-files/Inter-Black.woff?v=3.15") format("woff");
+        }
+        @font-face {
+            font-family: 'Inter';
+            font-style: italic;
+            font-weight: 900;
+            font-display: swap;
+            src: url("font-files/Inter-BlackItalic.woff2?v=3.15") format("woff2"), url("font-files/Inter-BlackItalic.woff?v=3.15") format("woff");
+        }
+         :root {
+            --infoStr: "Inter\0000a0for Google\0000a00.1";
+            --font: "Inter";
+        }
+        .gb_l .gb_pb {
+            letter-spacing: -.007em;
         }
     }
-}
-
-@-moz-document regexp("https?:\\/\\/news.google\\.(co\\..*|com)\\/.*") {
-    /* google news */
-    .iDvCIf,
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span:not(.DPvwYc) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.005em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    h1,
-    h2,
-    h3 {
-        letter-spacing: -.023em
-    }
-    if (ver) {
-        .AXKfz {
-            font-family: var(--font);
-            line-height: 1.5em
+    
+    @-moz-document regexp("https?:\\/\\/((www|images)\\.)?google\\.(co\\..*|com)\\/(search|webhp|videohp|advanced_search|advanced_image_search|preferences|shopping|imghp).*"),
+    regexp("https?:\\/\\/((www|images)\\.)?google\\.(co\\..*|com)\\/(\\?.*)?") {
+        /* google search */
+        .tdwSqf,
+        .wf-b,
+        .wf-b .DsryEe,
+        .wf-b .V88cHc,
+        .wf-b .XcVN5d,
+        .wf-b .h1QFOe,
+        .wf-b .mfMhoc,
+        a,
+        div,
+        html,
+        input,
+        p,
+        select,
+        span {
+            font-family: var(--font), sans-serif !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
         }
-        .AXKfz:after {
-            opacity: .6;
-            content: var(--infoStr)
+        .vk_h {
+            font-weight: 400!important;
+            letter-spacing: -.02em
         }
-    }
-}
-
-@-moz-document regexp("https?:\\/\\/books\\.google\\.(co\\..*|com)\\/.*"),
-regexp("https?:\\/\\/(www\\.)?google\\.(co\\..*|com)\\/books\\/.*") {
-    /* google books */
-    a,
-    div,
-    html,
-    input,
-    p,
-    select,
-    span {
-        letter-spacing: -.005em
-    }
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span,
-    label,
-    td,
-    font {
-        font-family: var(--font), sans-serif !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    .RXe4Be,
-    h1,
-    h2,
-    h3 {
-        letter-spacing: -.023em
-    }
-    b,
-    em {
-        font-weight: 700
-    }
-    .ab_button {
-        font-weight: 600
-    }
-    if (ver) {
-        #fsl:after,
-        .footerRight:after,
-        #footer_table:after {
-            padding-left: 27px;
-            opacity: .6;
-            content: var(--infoStr)
+        b,
+        em {
+            font-weight: 700
+        }
+        .ab_button,
+        .co8aDb b {
+            font-weight: 600
+        }
+        .co8aDb>b>b {
+            font-weight: 800;
+            letter-spacing: 0
+        }
+        .LC20lb,
+        .JolIg,
+        .XcVN5d,
+        .zbA8Me {
+            letter-spacing: -.01em
+        }
+        .XpoqFe {
+            /* to keep IPA symbols consistent */
+            font-family: 'Arial', var(--font), sans-serif!important;
+            letter-spacing: .01em
+        }
+        .ynRric {
+            letter-spacing: -.002em !important
+        }
+        .Uekwlc,
+        .vk_sh {
+            font-weight: 400!important
+        }
+        .ellip {
+            font-size: 21px;
+            letter-spacing: -.02em;
+        }
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -.015em !important;
+        }
+        if (ver) {
+            #fsl:after {
+                padding-left: 27px;
+                opacity: .6;
+                content: var(--infoStr)
+            }
         }
     }
-}
-
-@-moz-document regexp("https:\\/\\/scholar\\.google\\.(co\\..*|com).*") {
-    /* google scholar */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.005em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    h1,
-    h2,
-    h3 {
-        letter-spacing: -.015em
-    }
-    #gs_hp_giants {
-        font-size: 1.5em;
-        letter-spacing: -.02em;
-        font-weight: 600
-    }
-    .gs_a,
-    .gs_a a:link,
-    .gs_a a:visited,
-    #gs_hp_giants {
-        color: #0F9D58;
-    }
-    .gs_ab_mdw {
-        font-weight: 600;
-        letter-spacing: -.01em;
-    }
-    if (ver) {
-        #gs_ftr:before {
-            order: 2;
-            content: var(--infoStr);
-            line-height: 16px;
-            padding: 12px 8px 12px 16px;
-            opacity: .65;
+    
+    @-moz-document regexp("https?:\\/\\/news.google\\.(co\\..*|com)\\/.*") {
+        /* google news */
+        .iDvCIf,
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span:not(.DPvwYc) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.005em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
         }
-        #gs_ftr_rt {
-            order: 3;
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -.023em
+        }
+        if (ver) {
+            .AXKfz {
+                font-family: var(--font);
+                line-height: 1.5em
+            }
+            .AXKfz:after {
+                opacity: .6;
+                content: var(--infoStr)
+            }
         }
     }
-}
-
-@-moz-document domain("drive.google.com"),
-domain("calendar.google.com") {
-    /* google drive + calendar */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span:not(.gb_he):not(.gb_fe):not(.DPvwYc) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.005em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    h1,
-    h2,
-    h3,
-    .h-sb-Ic,
-    .r0rGOd,
-    .rSoRzd,
-    .gb_3c,
-    .TgcD5e.CCDcoc .zHQkBf {
-        letter-spacing: -.015em
-    }
-    .h-sb-Ic {
-        font-weight: 500;
-    }
-    if (ver) {
-        .a-da-ub-ce:before {
-            margin-left: 27px;
-            padding: 16px 0;
-            opacity: .6;
-            content: var(--infoStr);
+    
+    @-moz-document regexp("https?:\\/\\/books\\.google\\.(co\\..*|com)\\/.*"),
+    regexp("https?:\\/\\/(www\\.)?google\\.(co\\..*|com)\\/books\\/.*") {
+        /* google books */
+        a,
+        div,
+        html,
+        input,
+        p,
+        select,
+        span {
+            letter-spacing: -.005em
         }
-        .erDb5d:after {
-            display: block;
-            padding-top: 4px;
-            padding-bottom: 8px;
-            content: var(--infoStr);
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span,
+        label,
+        td,
+        font {
+            font-family: var(--font), sans-serif !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
         }
-    }
-}
-
-@-moz-document domain("mail.google.com") {
-    /* gmail */
-    body,
-    input,
-    textarea,
-    select,
-    *,
-    .TO .nU>.n0,
-    .TO.NQ .nU>.n0,
-    .TO.nZ .nU>.n0,
-    .ah9>.CJ,
-    .n3>.CL>.CK,
-    .ha>.hP,
-    .hP,
-    .ha,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .z0>.L3,
-    .zA>.a4W,
-    .aKz,
-    .yW,
-    .a3s,
-    .g6,
-    .amn>.ams,
-    .jrH2Z,
-    .qR,
-    .DGj28e .YI {
-        font-family: var(--font) !important;
-        letter-spacing: -.005em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    if (ver) {
-        .ma:after {
-            display: block;
-            content: var(--infoStr);
+        .RXe4Be,
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -.023em
+        }
+        b,
+        em {
+            font-weight: 700
+        }
+        .ab_button {
+            font-weight: 600
+        }
+        if (ver) {
+            #fsl:after,
+            .footerRight:after,
+            #footer_table:after {
+                padding-left: 27px;
+                opacity: .6;
+                content: var(--infoStr)
+            }
         }
     }
-}
-
-@-moz-document domain("contacts.google.com") {
-    /* google contacts */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span:not(.gb_he):not(.gb_fe) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.002em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
+    
+    @-moz-document regexp("https:\\/\\/scholar\\.google\\.(co\\..*|com).*") {
+        /* google scholar */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.005em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -.015em
+        }
+        #gs_hp_giants {
+            font-size: 1.5em;
+            letter-spacing: -.02em;
+            font-weight: 600
+        }
+        .gs_a,
+        .gs_a a:link,
+        .gs_a a:visited,
+        #gs_hp_giants {
+            color: #0F9D58;
+        }
+        .gs_ab_mdw {
+            font-weight: 600;
+            letter-spacing: -.01em;
+        }
+        if (ver) {
+            #gs_ftr:before {
+                order: 2;
+                content: var(--infoStr);
+                line-height: 16px;
+                padding: 12px 8px 12px 16px;
+                opacity: .65;
+            }
+            #gs_ftr_rt {
+                order: 3;
+            }
+        }
     }
-    h1,
-    h2,
-    h3 {
-        letter-spacing: -.015em
+    
+    @-moz-document domain("drive.google.com"),
+    domain("calendar.google.com") {
+        /* google drive + calendar */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span:not(.gb_he):not(.gb_fe):not(.DPvwYc) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.005em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        h1,
+        h2,
+        h3,
+        .h-sb-Ic,
+        .r0rGOd,
+        .rSoRzd,
+        .gb_3c,
+        .TgcD5e.CCDcoc .zHQkBf {
+            letter-spacing: -.015em
+        }
+        .h-sb-Ic {
+            font-weight: 500;
+        }
+        if (ver) {
+            .a-da-ub-ce:before {
+                margin-left: 27px;
+                padding: 16px 0;
+                opacity: .6;
+                content: var(--infoStr);
+            }
+            .erDb5d:after {
+                display: block;
+                padding-top: 4px;
+                padding-bottom: 8px;
+                content: var(--infoStr);
+            }
+        }
     }
-    ca2xib {
-        letter-spacing: -.005em !important
+    
+    @-moz-document domain("mail.google.com") {
+        /* gmail */
+        body,
+        input,
+        textarea,
+        select,
+        *,
+        .TO .nU>.n0,
+        .TO.NQ .nU>.n0,
+        .TO.nZ .nU>.n0,
+        .ah9>.CJ,
+        .n3>.CL>.CK,
+        .ha>.hP,
+        .hP,
+        .ha,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .z0>.L3,
+        .zA>.a4W,
+        .aKz,
+        .yW,
+        .a3s,
+        .g6,
+        .amn>.ams,
+        .jrH2Z,
+        .qR,
+        .DGj28e .YI {
+            font-family: var(--font) !important;
+            letter-spacing: -.005em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        if (ver) {
+            .ma:after {
+                display: block;
+                content: var(--infoStr);
+            }
+        }
     }
-    if (ver) {
-        .gb_Kc>div,
-        .eejsDc,
-        .ANsHhf {
+    
+    @-moz-document domain("contacts.google.com") {
+        /* google contacts */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span:not(.gb_he):not(.gb_fe) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.002em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        h1,
+        h2,
+        h3 {
+            letter-spacing: -.015em
+        }
+        ca2xib {
+            letter-spacing: -.005em !important
+        }
+        if (ver) {
+            .gb_Kc>div,
+            .eejsDc,
+            .ANsHhf {
+                height: 100%;
+            }
+            .eejsDc {
+                display: block;
+            }
+            .ANsHhf:after {
+                display: block;
+                position: absolute;
+                content: var(--infoStr);
+                padding: 10px 26px;
+                bottom: 0;
+                overflow-x: hidden;
+            }
+        }
+    }
+    
+    @-moz-document domain("photos.google.com") {
+        /* google photos */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span:not(.gb_he):not(.gb_fe):not(.EIug8e) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.002em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        h1,
+        h2,
+        h3,
+        input {
+            letter-spacing: -.015em
+        }
+    }
+    
+    @-moz-document regexp("https?:\\/\\/(www\\.)?google\\.(co\\..*|com)\\/maps\\/.*"),
+    regexp("maps.google.com") {
+        /* google maps */
+        /* kinda useless but meh */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span:not(.gb_he):not(.gb_fe):not(.EIug8e) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.002em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        h1,
+        h2,
+        h3,
+        input {
+            letter-spacing: -.015em
+        }
+    }
+    
+    @-moz-document domain("podcasts.google.com") {
+        /* google podcasts */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        p,
+        select,
+        span:not(.gb_he):not(.gb_fe):not(.DPvwYc) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.002em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        h1,
+        h2,
+        h3,
+        input {
+            letter-spacing: -.015em
+        }
+        if (ver) {
+            .TvLR0:after {
+                display: block;
+                line-height: 1.5em;
+                content: var(--infoStr);
+            }
+        }
+    }
+    
+    @-moz-document domain("play.google.com") {
+        /* play store */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        body,
+        html,
+        input,
+        p,
+        select,
+        span:not(.gb_he):not(.gb_fe):not(.DPvwYc) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.002em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        body {
+            font-weight: 400 !important;
+        }
+        h1,
+        h2,
+        h3,
+        input {
+            letter-spacing: -.015em !important;
+        }
+        .kCSSQe {
+            font-weight: 400 !important;
+            letter-spacing: -.005em !important
+        }
+        .pvVVcb,
+        .mzRh0d .pvVVcb {
+            font-weight: 600 !important;
+            margin: auto;
+            vertical-align: middle;
+            padding-left: 14px;
+            position: relative;
+            height: 100%;
+            left: 52px;
+            width: unset;
+        }
+        .LS81yb-Ud7fr {
+            font-weight: 400;
+            font-size: 1.6em;
+        }
+        .zyvEve,
+        .Knqxbd,
+        .CoKTif {
+            width: 220px !important;
+        }
+        .CoKTif {
             height: 100%;
         }
-        .eejsDc {
-            display: block;
+        .Mqdrgf {
+            margin-left: 14px !important;
         }
-        .ANsHhf:after {
-            display: block;
-            position: absolute;
-            content: var(--infoStr);
-            padding: 10px 26px;
-            bottom: 0;
-            overflow-x: hidden;
+        .S6Rud,
+        .J919pd .S6Rud {
+            width: 54px
         }
-    }
-}
-
-@-moz-document domain("photos.google.com") {
-    /* google photos */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span:not(.gb_he):not(.gb_fe):not(.EIug8e) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.002em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    h1,
-    h2,
-    h3,
-    input {
-        letter-spacing: -.015em
-    }
-}
-
-@-moz-document regexp("https?:\\/\\/(www\\.)?google\\.(co\\..*|com)\\/maps\\/.*"),
-regexp("maps.google.com") {
-    /* google maps */
-    /* kinda useless but meh */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span:not(.gb_he):not(.gb_fe):not(.EIug8e) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.002em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    h1,
-    h2,
-    h3,
-    input {
-        letter-spacing: -.015em
-    }
-}
-
-@-moz-document domain("podcasts.google.com") {
-    /* google podcasts */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    p,
-    select,
-    span:not(.gb_he):not(.gb_fe):not(.DPvwYc) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.002em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    h1,
-    h2,
-    h3,
-    input {
-        letter-spacing: -.015em
-    }
-    if (ver) {
-        .TvLR0:after {
-            display: block;
-            line-height: 1.5em;
-            content: var(--infoStr);
+        if (ver) {
+            .WpDbMd:after {
+                display: block;
+                position: fixed;
+                bottom: 18px;
+                left: 23px;
+                opacity: .6;
+                content: var(--infoStr);
+                overflow: hidden;
+            }
         }
     }
-}
-
-@-moz-document domain("play.google.com") {
-    /* play store */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    body,
-    html,
-    input,
-    p,
-    select,
-    span:not(.gb_he):not(.gb_fe):not(.DPvwYc) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.002em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    body {
-        font-weight: 400 !important;
-    }
-    h1,
-    h2,
-    h3,
-    input {
-        letter-spacing: -.015em !important;
-    }
-    .kCSSQe {
-        font-weight: 400 !important;
-        letter-spacing: -.005em !important
-    }
-    .pvVVcb,
-    .mzRh0d .pvVVcb {
-        font-weight: 600 !important;
-        margin: auto;
-        vertical-align: middle;
-        padding-left: 14px;
-        position: relative;
-        height: 100%;
-        left: 52px;
-        width: unset;
-    }
-    .LS81yb-Ud7fr {
-        font-weight: 400;
-        font-size: 1.6em;
-    }
-    .zyvEve,
-    .Knqxbd,
-    .CoKTif {
-        width: 220px !important;
-    }
-    .CoKTif {
-        height: 100%;
-    }
-    .Mqdrgf {
-        margin-left: 14px !important;
-    }
-    .S6Rud,
-    .J919pd .S6Rud {
-        width: 54px
-    }
-    if (ver) {
-        .WpDbMd:after {
-            display: block;
-            position: fixed;
-            bottom: 18px;
-            left: 23px;
-            opacity: .6;
-            content: var(--infoStr);
-            overflow: hidden;
+    
+    @-moz-document domain("duo.google.com"),
+    domain("policies.google.com"),
+    regexp("https:\\/\\/accounts\\.google\\.(co\\..*|com).*"),
+    regexp("https:\\/\\/myaccount\\.google\\.(co\\..*|com).*"),
+    regexp("https:\\/\\/translate\\.google\\.(co\\..*|com).*"),
+    regexp("https:\\/\\/ogs\\.google\\.(co\\..*|com).*") {
+        /* misc */
+        a,
+        div,
+        h1,
+        h2,
+        h3,
+        html,
+        input,
+        body,
+        p,
+        select,
+        span:not(.gb_he):not(.gb_fe):not(.DPvwYc):not(.material-icons-extended) {
+            font-family: var(--font), sans-serif !important;
+            letter-spacing: -.002em !important;
+            font-feature-settings: "cv10", "calt", "kern" !important
+        }
+        h1,
+        h2,
+        h3,
+        input {
+            letter-spacing: -.015em !important;
         }
     }
-}
-
-@-moz-document domain("duo.google.com"),
-domain("policies.google.com"),
-regexp("https:\\/\\/accounts\\.google\\.(co\\..*|com).*"),
-regexp("https:\\/\\/myaccount\\.google\\.(co\\..*|com).*"),
-regexp("https:\\/\\/translate\\.google\\.(co\\..*|com).*"),
-regexp("https:\\/\\/ogs\\.google\\.(co\\..*|com).*") {
-    /* misc */
-    a,
-    div,
-    h1,
-    h2,
-    h3,
-    html,
-    input,
-    body,
-    p,
-    select,
-    span:not(.gb_he):not(.gb_fe):not(.DPvwYc):not(.material-icons-extended) {
-        font-family: var(--font), sans-serif !important;
-        letter-spacing: -.002em !important;
-        font-feature-settings: "cv10", "calt", "kern" !important
-    }
-    h1,
-    h2,
-    h3,
-    input {
-        letter-spacing: -.015em !important;
-    }
-}

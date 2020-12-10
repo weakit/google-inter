@@ -5,7 +5,7 @@
 @homepageURL  https://github.com/weakit/google-inter
 @updateURL    https://raw.githubusercontent.com/weakit/google-inter/master/google-inter.user.css
 @author       weakit <wea.kit@outlook.com>
-@version      0.1.2
+@version      0.1.3
 @license      MIT
 @preprocessor stylus
 
@@ -188,7 +188,8 @@ regexp("https?:\\/\\/((www|images)\\.)?google\\.(co\\..*|com)\\/(\\?.*)?") {
     .LC20lb,
     .JolIg,
     .XcVN5d,
-    .zbA8Me {
+    .zbA8Me,
+    .ellip {
         letter-spacing: -.01em
     }
     .XpoqFe {
@@ -202,10 +203,6 @@ regexp("https?:\\/\\/((www|images)\\.)?google\\.(co\\..*|com)\\/(\\?.*)?") {
     .Uekwlc,
     .vk_sh {
         font-weight: 400!important
-    }
-    .ellip {
-        font-size: 21px;
-        letter-spacing: -.02em;
     }
     h1,
     h2,
